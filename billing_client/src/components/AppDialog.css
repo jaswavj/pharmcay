@@ -1,0 +1,81 @@
+.app-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(3px);
+}
+
+.app-dialog-card {
+  width: min(420px, 100%);
+  background: var(--color-bg-surface, #fff);
+  color: var(--color-text, #1a202c);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.28);
+  padding: 22px 22px 18px;
+  text-align: center;
+}
+
+.app-dialog-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  background: color-mix(in srgb, var(--color-primary, #2b6cb0) 14%, transparent);
+  color: var(--color-primary, #2b6cb0);
+}
+
+.app-dialog-card.danger .app-dialog-icon {
+  background: #fff5f5;
+  color: #c53030;
+}
+
+.app-dialog-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.app-dialog-card p {
+  margin: 0;
+  white-space: pre-line;
+  color: var(--color-text-muted, #4a5568);
+  line-height: 1.45;
+}
+
+.app-dialog-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.app-dialog-actions button {
+  min-width: 108px;
+  height: 36px;
+  border-radius: 8px;
+  border: 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.app-dialog-cancel {
+  background: transparent;
+  border: 1.5px solid color-mix(in srgb, var(--color-primary, #2b6cb0) 28%, transparent) !important;
+  color: var(--color-text, #1a202c);
+}
+
+.app-dialog-ok {
+  background: var(--color-primary, #2b6cb0);
+  color: #fff;
+}
+
+.app-dialog-card.danger .app-dialog-ok {
+  background: #c53030;
+}
